@@ -1,0 +1,21 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="http://thymeleaf.org">
+	<head>
+		<meta charset="UTF-8"/>
+		
+	  <!-- See configuration in WebMvConfig.java -->
+      <link th:href="@{/bootstrap/css/bootstrap.min.css}"
+                rel="stylesheet" media="screen"/>
+		
+	<body>
+	
+		<div class="container">
+		    <a th:href="@{/index}" class="btn btn-primary mt-5">Go back</a>
+		</div>
+		
+		
+		<script th:src="@{/jquery/jquery.min.js}"></script>  
+    	<script th:src="@{/popper/popper.min.js}"></script>  
+    	<script th:src="@{/bootstrap/js/bootstrap.min.js}"></script> 
+	</body>
+</html>
