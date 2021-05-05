@@ -27,9 +27,8 @@
                 	<div class="form-group">
                     	<label for="leftCurrency" >Choose currency</label>
                     	<select class="form-control selectpicker" id="leftCurrency" name="leftCurrency">
-                        	<option>EUR</option>
 	                        <option>USD</option>
-	                        <option>RUB</option>
+	                        <option selected>RUB</option>
                     	</select>
                 	</div>
 				
@@ -37,8 +36,7 @@
                 	<div class="form-group">
 	                    <label for="rightCurrency">Choose currency</label>
 	                     <select class="form-control selectpicker" id="rightCurrency" name="rightCurrency">
-	                        <option>EUR</option>
-	                        <option>USD</option>
+	                        <option selected>USD</option>
 	                        <option>RUB</option>
 	                    </select>
 	                </div>
@@ -47,7 +45,7 @@
 						  <div class="input-group-prepend">
 						    <button class="btn btn-outline-secondary"  type="submit">Convert</button>
 						  </div>
-						  <input type="text" name="value" id="convert" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+						  <input type="text" name="value" id="convert" class="form-control" placeholder="0" aria-label="" aria-describedby="basic-addon1">
 						</div>
 
             	</form>
@@ -56,7 +54,7 @@
 	</div>
 	
 	<div class="row justify-content-center">
-		<p th:text="${value}">OUTPUT VALUE</p>
+		<p th:text="${outputValue}">OUTPUT VALUE</p>
 	</div>
 	
     <script th:src="@{/jquery/jquery.min.js}"></script>  
