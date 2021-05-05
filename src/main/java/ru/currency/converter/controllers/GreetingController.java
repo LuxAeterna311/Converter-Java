@@ -33,6 +33,11 @@ public class GreetingController {
 			@RequestParam(name = "rightCurrency", required = true, defaultValue = "USD") String rightCurrency,
 			Model model) {
 		
+		
+		if (value <= 0) {
+			value = Double.valueOf(0);
+		}
+		
 		model.addAttribute("value", value * 1.5);
 		return "index";
 	}
