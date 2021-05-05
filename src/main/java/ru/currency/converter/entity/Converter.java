@@ -1,7 +1,6 @@
 package ru.currency.converter.entity;
 
 import javax.validation.constraints.Min;
-import ru.currency.converter.entity.CurrencyParser;
 
 
 public class Converter {
@@ -27,12 +26,12 @@ public class Converter {
 		this.value = value;
 	}
 	
-	public double convert(CurrencyParser parser) {
+	public double convert(String url, String tag, String subtag) {
 		if (leftCurrency.equals("RUB")) {
-			return this.value / parser.getRub();
+			return this.value / CurrencyParser.getRUB(url, tag, subtag);
 		}
 		else {
-			return this.value * parser.getRub(); 
+			return this.value * CurrencyParser.getRUB(url, tag, subtag); 
 		}
 	}
 }

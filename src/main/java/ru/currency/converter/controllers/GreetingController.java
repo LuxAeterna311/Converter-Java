@@ -33,8 +33,7 @@ public class GreetingController {
 			converter.setValue(0.0);
 		}
 		
-		CurrencyParser parser = new CurrencyParser("https://www.cbr.ru/currency_base/daily/", "div.table", "tr");
-		double outputValue = converter.convert(parser);
+		double outputValue = converter.convert("https://www.cbr.ru/currency_base/daily/", "div.table", "tr");
 		
 		model.addAttribute("outputValue", outputValue);
 		return "index";
